@@ -19,7 +19,8 @@ from django.urls import include, path
 from django.shortcuts import redirect
 
 def redirect_view(request):
-    return redirect('/polls/')
+    return redirect("polls:index")
+    # return HttpResponseRedirect(reverse("polls:index"))
 
 urlpatterns = [
     path('', redirect_view),
