@@ -25,5 +25,6 @@ def redirect_view(request):
 urlpatterns = [
     path('', redirect_view),
     path('admin/', admin.site.urls),
-    path("polls/", include("polls.urls"))
+    path("polls/", include("polls.urls")),
+    path("__debug__/", include("debug_toolbar.urls")),
 ]
